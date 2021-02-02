@@ -100,10 +100,6 @@ app.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
 });
-/* REGISTER SOME USERS */
+/* REGISTER USERS */
 
-
-//UserDetails.register({username:'Jerud', active: false}, 'Payne');
-//UserDetails.register({username:'Ehsan', active: false}, 'Ashoori');
-//UserDetails.register({username:'roy', active: false}, 'roy');
-
+//UserDetails.register({username:'user here', active: false}, 'password here');

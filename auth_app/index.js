@@ -77,18 +77,18 @@ app.post('/login', (req, res, next) => {
 });
 
 app.get('/login',
-    (req, res) => res.sendFile('html/login.html',
+    (req, res) => res.sendFile('login.html',
         { root: __dirname })
 );
 
 app.get('/',
     connectEnsureLogin.ensureLoggedIn(),
-    (req, res) => res.sendFile('html/index.html', {root: __dirname})
+    (req, res) => res.sendFile('index.html', {root: __dirname})
 );
 
 app.get('/private',
     connectEnsureLogin.ensureLoggedIn(),
-    (req, res) => res.sendFile('html/private.html', {root: __dirname})
+    (req, res) => res.sendFile('private.html', {root: __dirname})
 );
 
 app.get('/user',
@@ -100,6 +100,8 @@ app.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
 });
-/* REGISTER USERS */
+/* REGISTER SOME USERS */
 
-//UserDetails.register({username:'user here', active: false}, 'password here');
+
+//UserDetails.register({username:'Jerud', active: false}, 'Payne');
+//UserDetails.register({username:'Ehsan', active: false}, 'Ashoori');
